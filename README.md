@@ -1,4 +1,5 @@
 kickd-pic32programmer
+https://github.com/orheggel/kickd-pic32programmer.git
 =====================
 
 Windows DLL API for Microchip PIC32 firmware update
