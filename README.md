@@ -1,5 +1,7 @@
 kickd-pic32programmer
 =====================
+https://github.com/orheggel/kickd-pic32programmer.git
+
 Windows DLL API for Microchip PIC32 firmware update
 
 This DLL is based on the "Microchip PC Application" MFC programming example PIC32UBL.exe. 
