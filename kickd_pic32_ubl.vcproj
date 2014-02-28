@@ -178,7 +178,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="echo Additional packaging for \bin folder&#x0D;&#x0A;copy &quot;$(TargetPath)&quot;  &quot;$(SolutionDir)\bin&quot;&#x0D;&#x0A;copy &quot;$(TargetDir)$(TargetName).lib&quot;  &quot;$(SolutionDir)\bin&quot;&#x0D;&#x0A;copy &quot;$(SolutionDir)$(TargetName).h&quot;  &quot;$(SolutionDir)\bin&quot;&#x0D;&#x0A;"
+				CommandLine="echo Additional packaging for \bin folder&#x0D;&#x0A;mkdir &quot;$(SolutionDir)\bin&quot;&#x0D;&#x0A;copy &quot;$(TargetPath)&quot;  &quot;$(SolutionDir)\bin&quot;&#x0D;&#x0A;copy &quot;$(TargetDir)$(TargetName).lib&quot;  &quot;$(SolutionDir)\bin&quot;&#x0D;&#x0A;copy &quot;$(SolutionDir)$(TargetName).h&quot;  &quot;$(SolutionDir)\bin&quot;&#x0D;&#x0A;"
 			/>
 		</Configuration>
 	</Configurations>
