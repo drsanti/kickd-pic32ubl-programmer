@@ -28,7 +28,7 @@ LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
 
 VS_VERSION_INFO VERSIONINFO
  FILEVERSION 0,2,0,0
- PRODUCTVERSION 0,0,2,0
+ PRODUCTVERSION 0,2,0,0
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -49,7 +49,7 @@ BEGIN
             VALUE "LegalCopyright", "original PIC32UBL (c) Microchip Technology Inc."
             VALUE "OriginalFilename", "kickd_pic32_ubl.dll"
             VALUE "ProductName", "Kickdrive PIC32 UBL DLL Wrapper"
-            VALUE "ProductVersion", "0, 0, 2, 0"
+            VALUE "ProductVersion", "0, 2, 0, 0"
         END
     END
     BLOCK "VarFileInfo"
