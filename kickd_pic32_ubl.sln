@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kickd_pic32_ubl", "kickd_pic32_ubl.vcproj", "{7FAEC0C8-1F59-4532-B503-9B360CD37D76}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pic32_firmware_upload_demo", "pic32_firmware_upload_demo\pic32_firmware_upload_demo.vcproj", "{20180359-87A7-49E2-8EBC-9FE1D1416BA7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7FAEC0C8-1F59-4532-B503-9B360CD37D76} = {7FAEC0C8-1F59-4532-B503-9B360CD37D76}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FAEC0C8-1F59-4532-B503-9B360CD37D76}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7FAEC0C8-1F59-4532-B503-9B360CD37D76}.Debug|Win32.Build.0 = Debug|Win32
+		{7FAEC0C8-1F59-4532-B503-9B360CD37D76}.Release|Win32.ActiveCfg = Release|Win32
+		{7FAEC0C8-1F59-4532-B503-9B360CD37D76}.Release|Win32.Build.0 = Release|Win32
+		{20180359-87A7-49E2-8EBC-9FE1D1416BA7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{20180359-87A7-49E2-8EBC-9FE1D1416BA7}.Debug|Win32.Build.0 = Debug|Win32
+		{20180359-87A7-49E2-8EBC-9FE1D1416BA7}.Release|Win32.ActiveCfg = Release|Win32
+		{20180359-87A7-49E2-8EBC-9FE1D1416BA7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,13 @@
+LIBRARY      kickd_pic32_ubl
+EXPORTS
+
+	DllMain
+	mcUblInit
+	mcUblShutdown
+	mcUblConnectAndProgram
+	mcUblDisconnect
+	mcUblMessagePump
+	mcUblGetStatus
+	
+   
+   
