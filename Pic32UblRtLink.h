@@ -1,9 +1,3 @@
-/*!
-\verbatim 
-$Id: Pic32UblRtLink.h 338 2014-02-28 12:53:18Z oliver $
-\endverbatim
-*/ 
-
 #pragma once
 
 //! DLL file path, relative to the current application path. Adjust if necessary
@@ -67,21 +61,21 @@ private:
 	HMODULE m_hmodule;
 	int m_dllStatus; 
 
-	typedef void (WINAPI *PtrToInit)(); 
+	typedef void (__cdecl *PtrToInit)(); 
 	PtrToInit m_pInit; 
 
-	typedef void (WINAPI *PtrToShutdown)(); 
+	typedef void (__cdecl *PtrToShutdown)(); 
 	PtrToShutdown m_pShutdown; 
 
-	typedef bool (WINAPI *PtrToConnectAndProgram)(const char *, const int, const int); 
+	typedef bool (__cdecl *PtrToConnectAndProgram)(const char *, const int, const int); 
 	PtrToConnectAndProgram m_pConnectAndProgram; 
 	
-	typedef void (WINAPI *PtrToDisconnect)(); 
+	typedef void (__cdecl *PtrToDisconnect)(); 
 	PtrToDisconnect m_pDisconnect; 
 
-	typedef void (WINAPI *PtrToMessagePump)();
+	typedef void (__cdecl *PtrToMessagePump)();
 	PtrToMessagePump m_pMessagePump; 
 
-	typedef int (WINAPI *PtrToGetStatus)();
+	typedef int (__cdecl *PtrToGetStatus)();
 	PtrToGetStatus m_pGetStatus;
 };

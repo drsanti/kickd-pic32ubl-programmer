@@ -1,7 +1,3 @@
-/*
-$Id: kickd_pic32_DLLmain.cpp 336 2014-02-28 12:44:41Z oliver $
-*/ 
-
 // Defines the initialization routines for the DLL.
 //
 

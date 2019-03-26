@@ -31,10 +31,8 @@ according to http://unlicense.org. No warranty.
 kickd_pic32_ubl.dll and the related example have been compiled using Visual Studio 2008, 
 but there is no need to recompile kickd_pic32_ubl.dll yourself. kickd_pic32_ubl.dll can be used
 "as is" - It is linked statically and does not require additional runtime DLLs.
+kickd_pic32_ubl.dll uses __cdecl calling convention (not __stdcall / WINAPI).
 
-\verbatim 
-$Id: kickd_pic32_ubl_doc.h 339 2014-02-28 13:00:04Z oliver $
-\endverbatim
 
 */
 

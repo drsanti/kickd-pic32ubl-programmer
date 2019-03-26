@@ -1,7 +1,3 @@
-/*
-$Id: Pic32UblRtLink.cpp 336 2014-02-28 12:44:41Z oliver $
-*/
-
 #include <tchar.h>
 #include "Pic32UblRtLink.h"
 

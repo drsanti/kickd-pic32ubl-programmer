@@ -1,10 +1,5 @@
 // PIC32UBLDlg.h : header file
 //
-/*
-\verbatim 
-$Id: PIC32UBLDlg.h 316 2014-02-21 23:04:31Z oliver $
-\endverbatim
-*/
 
 #pragma once
 #include "afxwin.h"
