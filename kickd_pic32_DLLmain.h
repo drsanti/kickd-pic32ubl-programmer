@@ -1,9 +1,4 @@
 //! Main header file for the kickd_pic32_ubl DLL
-/*
-\verbatim 
-$Id: kickd_pic32_DLLmain.h 336 2014-02-28 12:44:41Z oliver $
-\endverbatim
-*/
 
 #pragma once
 #include "kickd_pic32_ubl.h"

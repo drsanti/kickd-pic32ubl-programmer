@@ -1,12 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kickd_pic32_ubl", "kickd_pic32_ubl.vcproj", "{7FAEC0C8-1F59-4532-B503-9B360CD37D76}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kickd_pic32_ubl", "kickd_pic32_ubl.vcxproj", "{7FAEC0C8-1F59-4532-B503-9B360CD37D76}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pic32_firmware_upload_demo", "pic32_firmware_upload_demo\pic32_firmware_upload_demo.vcproj", "{20180359-87A7-49E2-8EBC-9FE1D1416BA7}"
-	ProjectSection(ProjectDependencies) = postProject
-		{7FAEC0C8-1F59-4532-B503-9B360CD37D76} = {7FAEC0C8-1F59-4532-B503-9B360CD37D76}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pic32_firmware_upload_demo", "pic32_firmware_upload_demo\pic32_firmware_upload_demo.vcxproj", "{20180359-87A7-49E2-8EBC-9FE1D1416BA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
