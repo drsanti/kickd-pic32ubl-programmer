@@ -253,19 +253,20 @@ LRESULT CPIC32UBLDlg::OnReceiveResponse(WPARAM cmd, LPARAM RxDataPtrAdrs)
 
 	case READ_CRC:
 		crc = ((RxData[1] << 8) & 0xFF00) | (RxData[0] & 0x00FF);
-		
+		// Reset erase->program-verify operation.
+		EraseProgVer = false;	
+
 		if(crc == mBootLoader.CalculateFlashCRC())
 		{
 			PrintKonsole("Verification successfull");
+			ublApiStatus = UBLAPI_READY;
+			OnBnClickedButtonRunapplication();
 		}
 		else
 		{
 			PrintKonsole("Verification failed");
+			ublApiStatus = UBLAPI_ERROR;
 		}
-		// Reset erase->program-verify operation.
-		EraseProgVer = false;
-		ublApiStatus = UBLAPI_READY;
-		OnBnClickedButtonRunapplication();
 		break;
 	}
 	
@@ -344,7 +345,7 @@ void CPIC32UBLDlg::OnBnClickedButtonRunapplication()
 {
 	CString string;
 
-	mBootLoader.SendCommand(JMP_TO_APP, 1, 10); // 10ms delay
+	mBootLoader.SendCommand(JMP_TO_APP, 1, 100); // 100ms delay
 	PrintKonsole("\nCommand issued to run application");
 	ublApiStatus = UBLAPI_APPSTART; 
 }

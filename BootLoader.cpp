@@ -449,7 +449,7 @@ bool CBootLoader::SendCommand(char cmd, unsigned short Retries, unsigned short D
 	case JMP_TO_APP:
 		Buff[BuffLen++] = cmd;
 		MaxRetry = RetryCount = 1;	
-		TxRetryDelay = 10; // in ms
+		TxRetryDelay = 100; // in ms
 		break;
 	
 	case PROGRAM_FLASH:

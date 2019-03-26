@@ -70,7 +70,7 @@ void CComPort::OpenComPort(unsigned int comPort, unsigned int baud)
 		// Set timeouts in milliseconds    
 		CommTimeouts.ReadIntervalTimeout         = 0;
 		CommTimeouts.ReadTotalTimeoutMultiplier  = 0;
-		CommTimeouts.ReadTotalTimeoutConstant    = 5; // Read time out 5ms.
+		CommTimeouts.ReadTotalTimeoutConstant    = 50; // Read time out 50ms.
 		CommTimeouts.WriteTotalTimeoutMultiplier = 1;
 		CommTimeouts.WriteTotalTimeoutConstant   = 500; // Write time out 500ms.
 
