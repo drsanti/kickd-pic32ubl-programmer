@@ -1,4 +1,4 @@
-kickd-pic32programmer
+kickd-pic32ubl-programmer
 =====================
 https://github.com/orheggel/kickd-pic32ubl-programmer
 
