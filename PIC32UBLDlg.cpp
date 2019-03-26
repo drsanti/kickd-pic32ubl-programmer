@@ -157,7 +157,7 @@ void CPIC32UBLDlg::OnTimer(UINT nIDEvent)
  *****************************************************************************/
 void CPIC32UBLDlg::OnBnClickedButtonErase()
 {
-	mBootLoader.SendCommand(ERASE_FLASH, 3, 5000); //5s retry delay, becuse erase takes considerable time.
+	mBootLoader.SendCommand(ERASE_FLASH, 3, 7000); //7s retry delay, becuse erase takes considerable time.
 }
 
 
@@ -236,7 +236,7 @@ LRESULT CPIC32UBLDlg::OnReceiveResponse(WPARAM cmd, LPARAM RxDataPtrAdrs)
 		if(EraseProgVer)// Operation Erase->Program->Verify
 		{
 			// Erase completed. Next operation is programming.
-			mBootLoader.SendCommand(PROGRAM_FLASH, 3, 500); // 500ms delay	
+			mBootLoader.SendCommand(PROGRAM_FLASH, 10, 500); // 500ms delay	
 		}
 		ublApiStatus = UBLAPI_PROGRAM; 
 		break;
@@ -246,26 +246,27 @@ LRESULT CPIC32UBLDlg::OnReceiveResponse(WPARAM cmd, LPARAM RxDataPtrAdrs)
 		if(EraseProgVer)// Operation Erase->Program->Verify
 		{
 			// Programming completed. Next operation is verification.
-			mBootLoader.SendCommand(READ_CRC, 3, 5000);// 5 second delay
+			mBootLoader.SendCommand(READ_CRC, 5, 7000);// 7 second delay
 		}
 		ublApiStatus = UBLAPI_VERIFY; 
 		break;
 
 	case READ_CRC:
 		crc = ((RxData[1] << 8) & 0xFF00) | (RxData[0] & 0x00FF);
-		
+		// Reset erase->program-verify operation.
+		EraseProgVer = false;	
+
 		if(crc == mBootLoader.CalculateFlashCRC())
 		{
 			PrintKonsole("Verification successfull");
+			ublApiStatus = UBLAPI_READY;
+			OnBnClickedButtonRunapplication();
 		}
 		else
 		{
 			PrintKonsole("Verification failed");
+			ublApiStatus = UBLAPI_ERROR;
 		}
-		// Reset erase->program-verify operation.
-		EraseProgVer = false;
-		ublApiStatus = UBLAPI_READY;
-		OnBnClickedButtonRunapplication();
 		break;
 	}
 	
@@ -330,7 +331,7 @@ void CPIC32UBLDlg::OnBnClickedButtonEraseProgVerify()
 {
 	EraseProgVer = true;
 	// Start with erase. Rest is automatically handled by state machine.
-	mBootLoader.SendCommand(ERASE_FLASH, 3, 5000); // 5s delay
+	mBootLoader.SendCommand(ERASE_FLASH, 5, 5000); // 5s delay
 	ublApiStatus = UBLAPI_ERASE; 
 }
 
@@ -344,7 +345,7 @@ void CPIC32UBLDlg::OnBnClickedButtonRunapplication()
 {
 	CString string;
 
-	mBootLoader.SendCommand(JMP_TO_APP, 1, 10); // 10ms delay
+	mBootLoader.SendCommand(JMP_TO_APP, 5, 100); // 100ms delay
 	PrintKonsole("\nCommand issued to run application");
 	ublApiStatus = UBLAPI_APPSTART; 
 }
