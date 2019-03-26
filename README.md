@@ -1,6 +1,6 @@
 kickd-pic32programmer
 =====================
-https://github.com/orheggel/kickd-pic32programmer.git
+https://github.com/orheggel/kickd-pic32ubl-programmer
 
 Windows DLL API for Microchip PIC32 firmware update
 
@@ -15,5 +15,5 @@ public domain according to http://unlicense.org. No warranty.
 See doc\kickd_pic32_ubl_manual.pdf for more information.
 
 See 
-https://github.com/orheggel/kickd-pic32programmer.git
+https://github.com/orheggel/kickd-pic32ubl-programmer
 for source code and additional information.
